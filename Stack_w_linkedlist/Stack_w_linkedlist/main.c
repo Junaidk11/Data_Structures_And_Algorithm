@@ -535,7 +535,8 @@ char* infix_to_postfix_2(char *infix, int size){
                 j++;
             }else{
                 
-                // Outside stack operator and top of stack operator precendences are equal -> i.e. closing bracket found in infix, and opening bracket at top of stack
+                // Outside stack operator and top of stack operator precendences are equal -> i.e. closing bracket found in infix, and 
+                   //opening bracket at top of stack
                 
                 // Pop the stack ONLY, don't add to the postfix expression
                 STACK_pop(&operator_stack);
@@ -564,8 +565,8 @@ char* infix_to_postfix_2(char *infix, int size){
     In computers, infix expressions are first converted to postfix expression and then evaluated - this way the expression is evaluated in a single scan.
     
     Assuming we have the postfix expresion, you evaluate this as follows:
-            As you scan the postfix expression, Operands are pushed into stack and whenever you get an operator, you pop two operands and perform operation, followed
-                by pushing the result on to the stack again.
+            As you scan the postfix expression, Operands are pushed into stack and whenever you get an operator, you pop two operands and perform operation, 
+            followed by pushing the result on to the stack again.
         
     Note:
             The first operand popped from the stack is the right operand and the second operand is the left operand.

@@ -1052,7 +1052,8 @@ void insert_node_sorted_list(struct Node** headptr, int data){
     Analysis:
             Deleting the first node is done in constant time. -> o(1)
             Deleting the last node takes the maximum time. -> o(n)
-            You need two pointers to delete a node, one to find the node to delete, the other is used to update link of the node before the node you want to delete.
+            You need two pointers to delete a node, one to find the node to delete, the other is used to update 
+            link of the node before the node you want to delete.
                 Therefore, you only update one link in the list to delete a node.
  */
 void delete_node(struct Node **headptr, int index){

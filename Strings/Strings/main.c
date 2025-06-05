@@ -800,19 +800,24 @@ bool isAnagram_using_search(char *str1, char *str2){
         The permutations of all the characters in the given string can be represented using a
         state-space tree. The procedure used is called Brute Force, which looks at all the possible
         solutions. Brute force can be achieved in many ways, we will look at Backtracking method,
-        where you explore one option and then you comeback and explore others in the level. Backtracking can be implemented recursively and iteratively.
+        where you explore one option and then you comeback and explore others in the level. Backtracking can be implemented recursively and 
+        iteratively.
         We will look at recursive implementation.
  
         You have two static arrays, one to store the leaf node result and the other
         is to store the flag corresponding to visited node (in this case the taken character from the given string).
         
         On each function call, you first check if the current character in the string is null, if it
-        is then you print the result stored in the result array.Else, you scan through the visited node flag array to find character not taken yet. You can take the character and store it in the result array, set the flag corresponding to this character in the visited flag array and call the function again to jump to the next level of the state-space tree.
+        is then you print the result stored in the result array.Else, you scan through the visited node flag array to find character not taken yet. 
+        You can take the character and store it in the result array, set the flag corresponding to this character in the visited flag array and 
+        call the function again to jump to the next level of the state-space tree.
  
         The argument 'k' is the level of the state-space tree representing all possible permutations
-        of the given character string. The last level of the state-space tree is equal to the size of the string, which is (number of characters in the string + null character). Therefore, you can use this 'k' to determine when you've found a possible permuation of the given string.
+        of the given character string. The last level of the state-space tree is equal to the size of the string, which is (number of characters in the string + null 
+        character). Therefore, you can use this 'k' to determine when you've found a possible permuation of the given string.
         
-        Summary: You use a visited node flag array to keep track of the character taken in the previous recursive call, this helps you decide which character is available to taken. The result array is used to store the character taken at current call, before calling the function again. When you return from the function call, you have to clear the flag of character last taken, and continue scanning the visited flag array to find the next character available to take.
+        Summary: You use a visited node flag array to keep track of the character taken in the previous recursive call, this helps you decide which character is 
+        available to taken. The result array is used to store the character taken at current call, before calling the function again. When you return from the function call, you have to clear the flag of character last taken, and continue scanning the visited flag array to find the next character available to take.
  
         The max number of possible characters in the given string is usually given, use
         that to create a static array.
